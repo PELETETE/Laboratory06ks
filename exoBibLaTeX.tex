@@ -1,0 +1,61 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{csquotes}  % Important with biblatex 
+
+
+\usepackage[backend=biber, style=authoryear]{biblatex}
+
+
+\addbibresource{references.bib}
+
+\title{Exercice Biblatex - Test Complet}
+\author{Votre Nom}
+\date{\today}  
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Test complet de biblatex avec différentes fonctionnalités.
+
+\section{Citations de base}
+
+\subsection{Citations simples}
+\begin{itemize}
+    \item Article: \textcite{Thomas2008}
+    \item Livre: \parencite{Graham1995}
+    \item Avec pages: \parencite[7010-7015]{Thomas2008}
+    \item Multiple: \parencite{Thomas2008, Smith2020, Doe2019}
+\end{itemize}
+
+\subsection{Commandes de citation avancées}
+\begin{itemize}
+    \item Auteur seulement: \citeauthor{Smith2020}
+    \item Année seulement: \citeyear{Graham1995}
+    \item Auteur et année: \citeauthor{Thomas2008} (\citeyear{Thomas2008})
+\end{itemize}
+
+\section{Test de citations manquantes}
+Citation qui n'existe pas dans la base: \textcite{ReferenceManquante2025}
+
+\section{Ajout de nouvelles références}
+\begin{itemize}
+    \item Référence existante: \parencite{Doe2019}
+    \item Nouvelle référence (à ajouter au .bib): \textcite{NouveauLivre2024}
+\end{itemize}
+
+\section{Comparaison des styles}
+Testez en changeant le style dans le préambule:
+\begin{itemize}
+    \item \texttt{style=authoryear}: (Auteur, Année)
+    \item \texttt{style=numeric}: [1], [2], [3]
+    \item \texttt{style=alphabetic}: [Tho08], [Gra95]
+\end{itemize}
+
+\printbibliography[title={Bibliographie}]
+
+\end{document}

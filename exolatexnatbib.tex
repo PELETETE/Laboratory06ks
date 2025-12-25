@@ -1,0 +1,41 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+
+% Deux options pour natbib:
+\usepackage{natbib}              % Style auteur-année
+%\usepackage[numbers]{natbib}    % Style numérique (décommentez pour tester)
+
+\title{Exemple avec NatBib}
+\author{Votre Nom}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Test avec NatBib (Pele T.  Koulyabov C. Konstantin L. -2025)}
+
+\subsection{Citations}
+Voici quelques citations de notre base de données:
+
+\begin{itemize}
+    \item Citation simple: \citet{Thomas2008}
+    \item Citation entre parenthèses: \citep{Graham1995}
+    \item Citation avec pages: \citep[pp. 7010-7015]{Thomas2008}
+    \item Multiple citations: \citep{Thomas2008, Smith2020, Doe2019}
+\end{itemize}
+
+\subsection{Citation qui n'existe pas}
+Essayons une citation qui n'est pas dans la base: \citet{Nonexistent2023}% trying in french
+
+\subsection{New enter }
+ référence dans le fichier .bib: \citep{Doe2019}
+
+% Bibliographie
+\bibliographystyle{plainnat}  % Style for natbib
+\bibliography{references}    % important without bib but not important with biblatex
+
+\end{document}

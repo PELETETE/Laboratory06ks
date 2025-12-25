@@ -1,0 +1,35 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{Mon Document avec Bibliographie}
+\authors{Thomas, Christine M. and Liu, Tianbiao and Hall, Michael B.
+and Darensbourg, Marcetta Y.}
+\date{\2008}
+\volume= {47},
+\number= {15},
+\pages= {7009-7024},
+\begin{document}
+
+\maketitle
+
+\section{Introduction} This document demonstrates how to use a bibliography with LaTeX.
+\section{Citations}
+Here somes citations:
+
+\subsection{scientifics Articles}
+L'article de Thomas et al. \cite{Thomas2008} studies iron complexes for hydrogenase modeling. This research is important for understanding the redox properties of catalysts.
+\subsection{Livre de référence}
+Le livre \textit{Concrete Mathematics} of Graham, Knuth and Patashnik \cite{Graham1995} is an essential reference in discrete and concrete mathematics.
+
+\section{Conclusion}
+Les références bibliographiques sont essentielles pour tout travail académique.
+
+% Bibliographie
+\bibliographystyle{plain}  % Style
+\bibliography{Pratical scientific dissertation KOULYABOV C.}  % Fichier .bib 
+
+\end{document}

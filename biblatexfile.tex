@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage[backend=biber, style=numeric]{biblatex}
+\addbibresource{references.bib}
+
+\begin{document}
+
+\section*{Test biblatex avec style numérique}
+
+Voici quelques citations pour tester biblatex :
+
+\begin{itemize}
+\item Une citation simple \cite{Thomas2008}
+\item Une citation de livre \cite{Graham1995}
+\item Une citation de conférence \cite{Smith2020}
+\item Une citation multiple \cite{Thomas2008,Graham1995,Smith2020}
+\end{itemize}
+
+\section*{Test d'une citation non existante}
+
+Essayons de citer quelque chose qui n'existe pas dans la base : \cite{Unknown2023}
+
+\section*{Test avec un nouveau style}
+
+Nous pouvons facilement changer le style, par exemple en utilisant \verb|style=alphabetic|.
+
+\printbibliography
+
+\end{document}
